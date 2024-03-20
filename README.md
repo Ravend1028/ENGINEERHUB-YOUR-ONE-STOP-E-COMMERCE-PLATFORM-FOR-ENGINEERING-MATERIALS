@@ -1,2 +1,2 @@
 # EngineerHub-Your-One-Stop-E-commerce-Platform-for-Engineering-Materials
- E-commerce Platform Using Bootstrap, Javascript, PHP and MySQL
+Welcome to EngineerHub, your one-stop e-commerce platform for engineering materials. Engineered with Bootstrap, JavaScript, PHP, and MySQL, EngineerHub offers engineers a seamless experience to buy and sell materials hassle-free. Browse through a wide range of engineering materials, enjoy a user-friendly interface, and rest assured with secure transactions. Advanced search and filter options help you find what you need, while sellers can manage listings through a dedicated dashboard.
