@@ -15,7 +15,6 @@
       </div>     
   </section>
     
-
   <!-- News Letter Section -->
   <section class="bg-primary text-light p-4">
     <div class="container">
@@ -78,7 +77,6 @@
     </section>
 
     <!-- Information Section -->
-
     <section id="learn" class="p-5">
       <div class="container">
         <div class="row align-items-center justify-content-between">
@@ -104,7 +102,6 @@
         </div>
       </div>
     </section>
-
 
 <?php include 'footer.php'; ?>
 
