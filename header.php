@@ -32,10 +32,10 @@
             <a href="#" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Feedback</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Feedback</a>
+            <a href="#" class="nav-link">Login</a>
           </li>
         </ul>
       </div>
