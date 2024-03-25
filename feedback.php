@@ -27,3 +27,5 @@ $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
       </div>
     <?php endforeach; ?>
   </div>
+
+<?php include 'footer_template.php'; ?>

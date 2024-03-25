@@ -1,10 +1,11 @@
 <?php include 'header.php'; ?>
 
 <section class="p-5">
-  <div class="container">
-    <div class="row d-flex flex-column justify-content-center align-items-center">
-      <div class="card w-75">
-        <div class="card-body text-center">
+  <div class="container-sm">
+    <div class="row d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center">
+      <div class="col w-50 d-flex flex-column justify-content-center align-items-center">
+        <div class="card w-100">
+          <div class="card-body text-center">
             <div class="mb-4">
              <h2>
               Login
@@ -29,8 +30,11 @@
             <div class="container p-3">
               <a href="">Create an account</a>
             </div>
+          </div>
         </div>
       </div> 
     </div> 
   </div>
 </section>
+
+<?php include 'footer_template.php'; ?>

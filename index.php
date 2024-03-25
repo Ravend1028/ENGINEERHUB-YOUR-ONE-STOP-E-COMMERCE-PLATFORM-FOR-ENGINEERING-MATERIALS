@@ -77,27 +77,22 @@
     </section>
 
     <!-- Information Section -->
-    <section id="learn" class="p-5">
+    <section class="p-5">
       <div class="container">
         <div class="row align-items-center justify-content-between">
           <div class="col-md">
-            <img src="img/fundamentals.svg" class="img-fluid" alt="" />
+            <img src="images/engineering_img.jpg" class="img-fluid" alt="engineering_img" />
           </div>
           <div class="col-md p-5">
-            <h2>Learn The Fundamentals</h2>
+            <h2>Engineering Materials Superstore</h2>
             <p class="lead">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Similique deleniti possimus magnam corporis ratione facere!
+              Welcome to EngineerHub, your ultimate destination for engineering materials. 
+              Explore our extensive catalog featuring a diverse array of metals, polymers, 
+              ceramics, composites, and more. Whether you're a student, researcher, or industry professional,
+              EngineerHub provides a seamless shopping experience with comprehensive product information, 
+              competitive pricing, and efficient delivery. Simplify your material sourcing process and
+              unleash your creativity with EngineerHub today.
             </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-              reiciendis eius autem eveniet mollitia, at asperiores suscipit
-              quae similique laboriosam iste minus placeat odit velit quos,
-              nulla architecto amet voluptates?
-            </p>
-            <a href="#" class="btn btn-light mt-3">
-              <i class="bi bi-chevron-right"></i> Read More
-            </a>
           </div>
         </div>
       </div>
