@@ -4,6 +4,7 @@
 
 $username = $password = '';
 $usernameErr = $passwordErr = '';
+$incorrectPw = $unrecognizedUser = '';
 
 if(isset($_POST['submit'])) {
   
@@ -20,7 +21,7 @@ if(isset($_POST['submit'])) {
   if(empty($_POST['password'])) {
     $passwordErr = 'Password is required';
   } else {
-    //$password = password_hash('password', PASSWORD_DEFAULT);
+    //$password = password_hash($password, PASSWORD_DEFAULT);
     //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $password = $_POST["password"];
   }
@@ -41,11 +42,11 @@ if(isset($_POST['submit'])) {
             $_SESSION['username'] = $username;
             header('Location: index.php');
           } else {
-            echo 'Incorrect password.';
+            $incorrectPw = 'Incorrect Username or Password';
           }
 
       } else {
-        echo 'No matching account found.';
+        $unrecognizedUser = 'User does not exist';
       }
     } else {
       echo 'Error: ' . mysqli_error($conn);
@@ -72,13 +73,13 @@ if(isset($_POST['submit'])) {
               <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                 <div class="mb-3 d-flex flex-column align-items-center">
                   <label for="username" class="form-label">Username</label>
-                  <input type="text" class="form-control w-75 <?php echo !$usernameErr ?:
+                  <input type="text" class="form-control w-75 <?php echo !$unrecognizedUser ?:
                   'is-invalid'; ?>" name="username" placeholder="Enter your username">
                 </div>
 
                 <div class="mb-3 d-flex flex-column align-items-center">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control w-75 <?php echo !$passwordErr ?:
+                  <input type="password" class="form-control w-75 <?php echo !$incorrectPw ?:
                   'is-invalid'; ?>" name="password" placeholder="Enter your password">
                 </div>
                 <div class="mb-3">
