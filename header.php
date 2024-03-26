@@ -1,5 +1,9 @@
 <?php include 'config/database.php'; ?>
 
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,9 +40,30 @@
           <li class="nav-item">
             <a href="feedback.php" class="nav-link">Feedback</a>
           </li>
-          <li class="nav-item">
-            <a href="login.php" class="nav-link">Login</a>
-          </li>
+
+          <?php 
+
+            if(isset($_SESSION['username'])) {
+              $user = $_SESSION['username'];
+              echo " 
+              <li class='nav-item'>
+                <a href='shop_index.php' class='nav-link'>$user</a>
+              </li>
+
+              <li class='nav-item'>
+                <a href='logout.php' class='nav-link'>Logout</a>
+              </li>
+              " ;
+            } else {
+              echo " 
+              <li class='nav-item'>
+                <a href='login.php' class='nav-link'>Login</a>
+              </li>
+              ";
+            }
+
+          ?>
+
         </ul>
       </div>
     </div>

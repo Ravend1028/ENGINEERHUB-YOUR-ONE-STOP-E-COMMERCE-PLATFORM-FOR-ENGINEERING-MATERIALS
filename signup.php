@@ -1,7 +1,8 @@
 <?php include 'header.php'; ?>
 
 <?php 
-$username = $password = $email = $fullname = '';
+
+$username = $password = $email = $fullname = $hashedPassword = '';
 $usernameErr = $passwordErr = $emailErr = $fullnameErr = '';
 
 if(isset($_POST['submit'])) {
@@ -19,11 +20,16 @@ if(isset($_POST['submit'])) {
   if(empty($_POST['password'])) {
     $passwordErr = 'Password is required';
   } else {
-    $passsword = filter_input(
+    $password = $_POST["password"];
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    //hashing - $password = password_hash('password', PASSWORD_DEFAULT);
+
+    /*$password = filter_input(
       INPUT_POST,
       'password',
       FILTER_SANITIZE_FULL_SPECIAL_CHARS
-    );
+    ); */
+    
   }
 
   if(empty($_POST['email'])) {
@@ -40,7 +46,7 @@ if(isset($_POST['submit'])) {
 
   if (empty($usernameErr) && empty($passwordErr) && empty($emailErr) && empty($fullnameErr)) {
     // add to database
-    $sql = "INSERT INTO accounts VALUES ('$username', '$password', '$email', '$fullname')";
+    $sql = "INSERT INTO accounts VALUES ('$username', '$hashedPassword', '$email', '$fullname')";
     if (mysqli_query($conn, $sql)) {
       // success
       header('Location: login.php');
