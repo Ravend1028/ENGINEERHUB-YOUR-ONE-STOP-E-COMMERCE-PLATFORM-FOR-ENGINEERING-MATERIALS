@@ -40,7 +40,7 @@ if(isset($_POST['submit'])) {
           if (password_verify($password, $hashedPasswordFromDb)) {
             session_start();
             $_SESSION['username'] = $username;
-            header('Location: index.php');
+            header('Location: shop_index.php');
           } else {
             $incorrectPw = 'Incorrect Username or Password';
           }
