@@ -15,4 +15,8 @@ body {
   .news-input {
     width: 50%;
   }
+
+  .search-input {
+    width: 50%;
+  }
 }

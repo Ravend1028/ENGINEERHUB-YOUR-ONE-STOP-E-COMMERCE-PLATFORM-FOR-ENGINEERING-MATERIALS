@@ -112,4 +112,4 @@ if(isset($_POST['submit'])) {
     </div>
   </section>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer_template.php'; ?>
