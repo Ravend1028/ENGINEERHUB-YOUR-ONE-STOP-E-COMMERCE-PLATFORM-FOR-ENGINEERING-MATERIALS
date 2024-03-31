@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-  <section class="bg-warning text-dark p-4">
+  <section class="bg-warning text-dark p-3">
     <div class="container">
       <div class="d-md-flex justify-content-between align-items-center">
         <div class="input-group news-input">
@@ -8,7 +8,11 @@
           <button class="btn btn-dark btn-md" type="button">Search</button>
         </div>
 
-        <h5 class="mt-3 mt-md-0"><a href="cart.php">CART</a></h5>
+        <div class="h1 mb-3">
+          <a href="cart.php">
+            <i class="bi bi-cart4"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -46,7 +50,7 @@
           <div class="card-body text-center">
               <?php echo $product['prod_name']; ?>
               <div class="text-secondary mt-2">Price: <?php echo $product['prod_price']; ?></div>
-              <a href="#" class="btn btn-dark mt-2">Add to Cart</a>
+              <button class="btn btn-dark mt-2 add_to_cart">Add to Cart</button>
           </div>
       </div>
     </div>
