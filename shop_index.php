@@ -4,8 +4,8 @@
     <div class="container">
       <div class="d-md-flex justify-content-between align-items-center">
         <div class="input-group news-input">
-          <input type="text" class="form-control" placeholder="Browse for materials" />
-          <button class="btn btn-dark btn-md" type="button">Search</button>
+          <input id="search_input" type="text" class="form-control" placeholder="Browse for materials" />
+          <button id="search_button" class="btn btn-dark btn-md" type="button">Search</button>
         </div>
 
         <div class="h1 mb-3">
@@ -19,6 +19,13 @@
 
   <?php
   $sql = 'SELECT * FROM products';
+
+  if (isset($_GET['search'])) {
+    $search = $_GET['search'];
+    // Append the search condition to the SQL query
+    $sql .= " WHERE prod_name LIKE '%$search%'";
+  }
+
   $result = mysqli_query($conn, $sql);
   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
   ?>
@@ -50,7 +57,7 @@
           <div class="card-body text-center">
               <?php echo $product['prod_name']; ?>
               <div class="text-secondary mt-2">Price: <?php echo $product['prod_price']; ?></div>
-              <button class="btn btn-dark mt-2 add_to_cart">Add to Cart</button>
+              <button class="btn btn-dark mt-2 addToCart">Add to Cart</button>
           </div>
       </div>
     </div>
@@ -63,6 +70,5 @@
       endforeach;
     ?>
   </div>
-
 
 <?php include 'footer_template.php'; ?>
