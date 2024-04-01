@@ -17,7 +17,7 @@
     </div>
   </section>
 
-  <?php
+<?php
   $sql = 'SELECT * FROM products';
 
   if (isset($_GET['search'])) {
@@ -28,7 +28,7 @@
 
   $result = mysqli_query($conn, $sql);
   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  ?>
+?>
 
   <div class="container">
     <?php
