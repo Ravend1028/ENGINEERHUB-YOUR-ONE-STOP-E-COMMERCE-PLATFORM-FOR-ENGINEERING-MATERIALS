@@ -14,7 +14,7 @@
       $sql = "SELECT * FROM products WHERE prod_name LIKE '%$search%'";
   } else {
       // Define SQL query to fetch all products
-      $sql = 'SELECT * FROM products';
+      $sql = 'SELECT * FROM products LIMIT 11';
   }
   // Execute the SQL query
   $result = mysqli_query($conn, $sql);
@@ -63,4 +63,9 @@
       displayProducts($products);
       ?>
     </div>
+
+    <div class="container d-flex justify-content-end">
+      <button class="btn btn-dark btn-md">Next &gt;&gt;</button>
+    </div>
+
   </div>
