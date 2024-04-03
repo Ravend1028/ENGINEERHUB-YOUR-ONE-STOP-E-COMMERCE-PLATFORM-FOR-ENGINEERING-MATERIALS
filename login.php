@@ -65,9 +65,9 @@ if(isset($_POST['submit'])) {
           <div class="card w-100">
             <div class="card-body text-center">
               <div class="mb-4">
-              <h2>
-                Login
-              </h2>
+                <h2>
+                  Login
+                </h2>
               </div>
 
               <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
@@ -87,8 +87,12 @@ if(isset($_POST['submit'])) {
                 </div>
               </form>
 
-              <div class="container p-3">
-                <a href="signup.php">Create an account</a>
+              <div class="container p-2 pb-1">
+                <a href="forgot_password.php">Forgot Password</a>
+              </div>
+
+              <div class="container p-2 pt-1">
+                <a href="signup.php">Create an Account</a>
               </div>
             </div>
           </div>
