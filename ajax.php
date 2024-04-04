@@ -27,7 +27,7 @@
 ?>
 
   <div id="products-container" class="container">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4">
       <?php
       // Function to display products
       function displayProducts($products) {
@@ -35,9 +35,9 @@
       ?>
 
       <div class="col">
-        <div class="card my-3" style="height: 100%;">
+        <div class="card my-3" style="height: 95%;" data-product-id="<?php echo $product['id']; ?>">
           <?php
-            // Check if product image is available
+            // Check if product image is availables
             if (!empty($product['prod_img'])) {
               // Convert BLOB data to base64 format
               $imgData = base64_encode($product['prod_img']);
@@ -52,7 +52,7 @@
           <div class="card-body text-center">
             <?php echo $product['prod_name']; ?>
             <div class="text-secondary mt-2">Price: <?php echo $product['prod_price']; ?></div>
-            <button class="btn btn-dark mt-2 addToCart">Add to Cart</button>
+            <button class="add-to-cart btn btn-dark mt-2">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -69,3 +69,5 @@
     </div>
 
   </div>
+
+<script src="scripts/cart_action.js"></script>
