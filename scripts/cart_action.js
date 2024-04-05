@@ -40,4 +40,5 @@ document.addEventListener("DOMContentLoaded", function() {
       // Send the request with the product ID
       xhr.send("id=" + encodeURIComponent(productId));
   }
+
 });

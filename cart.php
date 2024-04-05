@@ -20,7 +20,7 @@
   </section>
 
 <?php
-  $sql = 'SELECT p.prod_name, p.prod_price, p.prod_img, c.stamp
+  $sql = 'SELECT p.prod_name, p.prod_price, p.prod_img, c.stamp, c.prod_id
   FROM products p
   JOIN cart c ON p.id = c.prod_id;
   ';
@@ -28,7 +28,7 @@
   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
-  <div class="container">
+  <div id="cart-container" class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4">
 
       <?php
@@ -38,7 +38,7 @@
       ?>
 
       <div class="col">
-        <div class="card my-3" style="height: 95%;">
+        <div class="card my-3" style="height: 95%;" data-prod-id="<?php echo $product['prod_id']; ?>">
           <div class="text-secondary text-center mt-2">Added on: <?php echo date_format(
           date_create($product['stamp']),
           'F j\, Y \| l \| g:ia  '
@@ -59,8 +59,8 @@
           <div class="card-body text-center">
             <?php echo $product['prod_name']; ?>
             <div class="text-secondary mt-2">Price: <?php echo $product['prod_price']; ?></div>
-            <button class="add-to-cart btn btn-dark mt-2">Check Out</button>
-            <a class="btn btn-link p-0 m-0 mt-2" href="#" role="button">Remove From Cart</a>
+            <button class="btn btn-dark mt-2">Check Out</button>
+            <button class="remove-to-cart btn btn-dark mt-2">Remove to Cart</button>
           </div>
         </div>
       </div>
@@ -74,4 +74,5 @@
     </div>
   </div>
 
-<?php include 'footer_template.php'; ?>
+<?php include 'js_footer.php'; ?>
+
