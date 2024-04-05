@@ -49,7 +49,8 @@ if(isset($_POST['submit'])) {
     $sql = "INSERT INTO accounts VALUES ('$username', '$hashedPassword', '$email', '$fullname')";
     if (mysqli_query($conn, $sql)) {
       // success
-      header('Location: login.php');
+      echo "<script>alert('Account Created Successfully'); window.location='login.php';</script>";
+      //header('Location: login.php');
     } else {
       // error
       echo 'Error: ' . mysqli_error($conn);
@@ -61,7 +62,7 @@ if(isset($_POST['submit'])) {
 ?>
 
 <section class="p-5">
-    <div class="container-sm">
+    <div class="container">
       <div class="row d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center">
         <div class="col w-50 d-flex flex-column justify-content-center align-items-center">
           <div class="card w-100">

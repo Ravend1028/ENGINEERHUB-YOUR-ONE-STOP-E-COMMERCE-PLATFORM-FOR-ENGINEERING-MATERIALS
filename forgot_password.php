@@ -40,7 +40,8 @@ if(isset($_POST['submit'])) {
       $sql = "UPDATE accounts SET password = '$hashedPassword' WHERE username = '$username'";
       if (mysqli_query($conn, $sql)) {
         // success
-        header('Location: login.php');
+        //header('Location: login.php');
+        echo "<script>alert('Password Changed Successfully'); window.location='login.php';</script>";
       } else {
         // error
         echo 'Error: ' . mysqli_error($conn);
@@ -56,7 +57,7 @@ if(isset($_POST['submit'])) {
 ?>
 
 <section class="p-5">
-    <div class="container-sm">
+    <div class="container">
       <div class="row d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center">
         <div class="col w-50 d-flex flex-column justify-content-center align-items-center">
           <div class="card w-100">

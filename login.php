@@ -59,7 +59,7 @@ if(isset($_POST['submit'])) {
 ?>
 
   <section class="p-5">
-    <div class="container-sm">
+    <div class="container">
       <div class="row d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center">
         <div class="col w-50 d-flex flex-column justify-content-center align-items-center">
           <div class="card w-100">

@@ -60,7 +60,7 @@
             <?php echo $product['prod_name']; ?>
             <div class="text-secondary mt-2">Price: <?php echo $product['prod_price']; ?></div>
             <button class="btn btn-dark mt-2">Check Out</button>
-            <button class="remove-to-cart btn btn-dark mt-2">Remove to Cart</button>
+            <button class="remove-to-cart btn btn-dark btn-link mt-2">Remove to Cart</button>
           </div>
         </div>
       </div>
