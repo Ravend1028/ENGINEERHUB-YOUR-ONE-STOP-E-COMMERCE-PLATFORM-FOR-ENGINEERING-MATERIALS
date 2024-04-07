@@ -64,10 +64,24 @@
       ?>
     </div>
 
-    <div class="container d-flex justify-content-end">
-      <button class="btn btn-dark btn-md">Next &gt;&gt;</button>
-    </div>
-
+    <?php 
+      if (isset($_GET['search'])) {
+        if(empty($_GET['search'])) {
+          echo '
+          <div class="container d-flex justify-content-end mb-3">
+            <button class="btn btn-dark btn-md">Next &gt;&gt;</button>
+          </div>';
+        } else {
+          echo '<hr>';
+        }
+        
+      } else {
+        echo '
+        <div class="container d-flex justify-content-end mb-3">
+          <button class="btn btn-dark btn-md">Next &gt;&gt;</button>
+        </div>';
+      } 
+    ?>
   </div>
 
 <script src="scripts/cart_action.js"></script>
